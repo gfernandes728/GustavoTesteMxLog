@@ -1,0 +1,56 @@
+## Compilação
+bin/
+obj/
+out/
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+
+## Sistema operacional
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+## Arquivos de log e cache
+*.log
+*.tlog
+*.pidb
+
+## Arquivos de build temporários
+*.dbmdl
+*.bak
+*.orig
+
+## Configurações locais
+*.local.json
+appsettings.*.json
+.env
+
+## Entity Framework Migrations (opcional, se não quiser versionar snapshots de migração)
+# Migrations/
+
+## Node.js (se usar no frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+## Arquivos do Rider/JetBrains (caso use)
+.idea/
+
+## Testes
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+## Outros
+*.swp
+*.tmp
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
