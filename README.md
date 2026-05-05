@@ -62,9 +62,9 @@ dotnet ef database update --project GustavoTesteMxLog.Infra --startup-project Gu
 ### 5. Rodar o projeto
 
 ```bash
-dotnet run --project GustavoTesteMxLog
+dotnet run --project GustavoTesteMxLog --launch-profile "https"
 ```
-Acesse no navegador: [https://localhost:44342](https://localhost:44342)
+Acesse no navegador: [https://localhost:7182/swagger/index.html](https://localhost:7182/swagger/index.html)
 
 > 💡 Na primeira vez que se roda o projeto será feito uma carga inicial de um Usuário para ser acessado, para conseguir logar e fazer o cadastro dos demais.
 
