@@ -53,10 +53,12 @@ public class UpdateUserTests
     [Fact]
     public async Task UpdateUser_UserDefaultIsNotUpdated_Test()
     {
+        var email = "admin@mxlog.com.br";
+
         var user = User.TryCreate
             (
                 name: _autoFaker.Generate<string>(),
-                email: "admin@mxlog.com.br",
+                email: email,
                 password: _autoFaker.Generate<string>()
             );
 
@@ -64,11 +66,14 @@ public class UpdateUserTests
             .Setup(x => x.GetByIdAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(user);
 
+        var requestEmail = _autoFaker.Generate<string>();
+        while (email == requestEmail) requestEmail = _autoFaker.Generate<string>();
+
         var request = new UpdateUserCommand
             (
                 Id: _autoFaker.Generate<Guid>(),
                 Name: _autoFaker.Generate<string>(),
-                Email: _autoFaker.Generate<string>(),
+                Email: requestEmail,
                 Password: _autoFaker.Generate<string>()
             );
 

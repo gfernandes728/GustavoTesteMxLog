@@ -22,7 +22,7 @@ public class UpdateUserCommandHandler
         var user = await _userRepository.GetByIdAsync(request.Id, cancellationToken)
             ?? throw new Exception("Usuário não existe.");
 
-        if (user.Email == "admin@mxlog.com.br")
+        if (user.Email == "admin@mxlog.com.br" && user.Email != request.Email)
             throw new Exception($"Usuário principal \"{user.Email}\" não pode ser alterado.");
 
         if (request.Name != user.Name && string.IsNullOrWhiteSpace(request.Name))
