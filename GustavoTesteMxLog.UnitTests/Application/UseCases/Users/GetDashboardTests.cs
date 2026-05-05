@@ -58,6 +58,7 @@ public class GetDashboardTests
         Assert.Equal(paginated.Total, result.Total);
         Assert.Equal(paginated.Page, result.Page);
         Assert.Equal(paginated.PageSize, result.PageSize);
+        Assert.Equal(1, result.TotalPages);
 
         Assert.NotNull(paginated.Data);
         Assert.Equal(paginated.Data.Count(), result.Data.Count);
@@ -104,6 +105,7 @@ public class GetDashboardTests
         Assert.Equal(paginated.Total, result.Total);
         Assert.Equal(paginated.Page, result.Page);
         Assert.Equal(paginated.PageSize, result.PageSize);
+        Assert.Equal(1, result.TotalPages);
 
         Assert.NotNull(paginated.Data);
         Assert.Equal(paginated.Data.Count(), result.Data.Count);
